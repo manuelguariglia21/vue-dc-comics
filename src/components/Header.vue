@@ -102,6 +102,7 @@ ul{
     a{  
       text-decoration: none;
       margin: 15px;
+      color: black;
       &:hover,
       &:active{
         color: #0C7CEC;

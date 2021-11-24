@@ -3,7 +3,11 @@
     <div class="f-top">
       <div class="container">
         <div class="side-l">
-          Left
+          <div class="f-menu">
+            <ul>
+              <li v-for="(link, index) in menus.links" :key="index" ><a href="#" ><span :class="{'active': link.current === true}">{{link.text}}</span></a></li>
+            </ul>
+          </div>
         </div>
         <div class="side-r">
           <img src="../assets/img/dc-logo-bg.png" alt="">
@@ -19,21 +23,98 @@
 </template>
 
 <script>
-
+export default {
+  name: 'Footer',
+  data(){
+    return{
+      menus: {
+        links:[
+          {
+            url:'/dc comics',
+            text: 'Dc Comics',
+            current: false
+          },
+          {
+            url:'/characters',
+            text: 'Characters',
+            current: false
+          },
+          {
+            url:'/comics',
+            text: 'Comics',
+            current: true
+          },
+          {
+            url:'/movies',
+            text: 'Movies',
+            current: false
+          },
+          {
+            url:'/tv',
+            text: 'TV',
+            current: false
+          },
+          {
+            url:'/games',
+            text: 'Games',
+            current: false
+          },
+          {
+            url:'/videos',
+            text: 'Videos',
+            current: false
+          },
+          {
+            url:'/news',
+            text: 'News',
+            current: false
+          },
+        ]
+      }
+    }
+  }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
   footer{
+
     .f-top{
       height: 300px;
       width: 100vw;
       background-image: url(../assets/img/footer-bg.jpg);
+      background-size: cover;
       color: white;
       display: flex;
       justify-content: space-between;
       overflow: hidden;
+      
+      ul{
+        list-style: none;
+        color: white;
+        font-size: 12px;
+        li{
+          &:first-of-type{
+            font-size: 16px;
+            font-weight: bolder;
+            text-transform: uppercase;
+          }
+          a{
+            text-decoration: none;
+            color: white;
+            span{
+              &:hover,
+              &:active{
+              color: white;
+              } 
+            }
+          }
+          
+        }
+      }
     }
+
     .f-bottom{
       height: 90px;
       width: 100vw;
