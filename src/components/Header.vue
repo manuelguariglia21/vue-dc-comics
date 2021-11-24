@@ -89,8 +89,10 @@ header{
 }
 
   
-.container img{
+.container{
+  img{
   width: 70px;
+  }
 }
 
 ul{
