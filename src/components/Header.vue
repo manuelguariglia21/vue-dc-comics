@@ -6,7 +6,7 @@
       </div>
       <nav>
         <ul>
-          <li><a href="#"><span>Home</span></a></li>
+          <li v-for="(link, index) in links" :key="index" ><a href="#" ><span :class="{'active': link.current === true}">{{link.text}}</span></a></li>
         </ul>
       </nav>
     </div>
@@ -42,7 +42,7 @@ export default {
         {
           url:'/games',
           text: 'GAMES',
-          current: true
+          current: false
         },
         {
           url:'/collectibles',
@@ -57,7 +57,7 @@ export default {
         {
           url:'/fans',
           text: 'FANS',
-          current: true
+          current: false
         },
         {
           url:'/news',
@@ -77,15 +77,44 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-  header{
-    height: 90px;
-    width: 100vw;
-    background-color: white;
-  }
+
+@import '../assets/style/mixins.scss';
+header{
+  height: 90px;
+  width: 100vw;
+  background-color: white;
+  color: black;
+  font-size: 12px;
+  font-weight: bolder;
+}
 
   
-  .container img{
-    width: 70px;
+.container img{
+  width: 70px;
+}
+
+ul{
+  @include list();
+
+  li{
+    a{  
+      text-decoration: none;
+      margin: 15px;
+      &:hover,
+      &:active{
+        color: #0C7CEC;
+      }
+      span{
+        padding-bottom: 29px;
+      }
+    }
   }
+  
+}
+
+span.active{
+  color: #0C7CEC;
+  border-bottom: 5px solid #0C7CEC;
+}
   
 </style>
