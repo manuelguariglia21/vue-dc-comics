@@ -8,6 +8,16 @@
               <li v-for="(link, index) in menus.links" :key="index" ><a href="#" ><span :class="{'active': link.current === true}">{{link.text}}</span></a></li>
             </ul>
           </div>
+          <div class="f-menu">
+            <ul>
+              <li v-for="(link, index) in menus.links" :key="index" ><a href="#" ><span :class="{'active': link.current === true}">{{link.text}}</span></a></li>
+            </ul>
+          </div>
+          <div class="f-menu">
+            <ul>
+              <li v-for="(link, index) in menus.links" :key="index" ><a href="#" ><span :class="{'active': link.current === true}">{{link.text}}</span></a></li>
+            </ul>
+          </div>
         </div>
         <div class="side-r">
           <img src="../assets/img/dc-logo-bg.png" alt="">
@@ -90,7 +100,10 @@ export default {
       justify-content: space-between;
       overflow: hidden;
       
-      ul{
+      .f-menu{
+        display: inline-block;
+        margin-right: 35px;
+        ul{
         list-style: none;
         color: white;
         font-size: 12px;
@@ -112,6 +125,7 @@ export default {
           }
           
         }
+      }
       }
     }
 
