@@ -165,6 +165,9 @@ export default {
         span, img{
           padding-right: 15px;
         }
+        img:last-of-type{
+          padding-right: 0;
+        }
       }
     }
     
