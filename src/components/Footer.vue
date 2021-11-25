@@ -29,6 +29,14 @@
         <div class="fb-left">
           <div class="btn"><a href="#">Sign-Up Now!</a></div>
         </div>
+        <div class="fb-right">
+          <span>Follow us</span>
+          <img src="../assets/img/footer-facebook.png" alt="">
+          <img src="../assets/img/footer-twitter.png" alt="">
+          <img src="../assets/img/footer-youtube.png" alt="">
+          <img src="../assets/img/footer-pinterest.png" alt="">
+          <img src="../assets/img/footer-periscope.png" alt="">
+        </div>
       </div>
     </div>
   </footer>
@@ -143,6 +151,19 @@ export default {
       .fb-left{
         .btn a{
           @include btn();
+        }
+      }
+      .fb-right{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span{
+          text-transform: uppercase;
+          color: #0086FF;
+          font-weight: bolder;
+        }
+        span, img{
+          padding-right: 15px;
         }
       }
     }
