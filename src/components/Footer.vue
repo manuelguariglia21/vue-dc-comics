@@ -26,7 +26,9 @@
     </div>
     <div class="f-bottom">
       <div class="container">
-        Ciao
+        <div class="fb-left">
+          <div class="btn"><a href="#">Sign-Up Now!</a></div>
+        </div>
       </div>
     </div>
   </footer>
@@ -88,6 +90,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@import '../assets/style/mixins.scss';
   footer{
 
     .f-top{
@@ -134,6 +137,14 @@ export default {
       width: 100vw;
       background-color: #303030;
       color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .fb-left{
+        .btn a{
+          @include btn();
+        }
+      }
     }
     
     
