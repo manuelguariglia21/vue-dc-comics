@@ -1,6 +1,10 @@
 <template>
   <main>
+    <div class="container text">
+        <div class="current-series">Current series</div>
+      </div>
     <div class="container boxes">
+      
       <Card 
       v-for="(card, index) in cards" 
       :key="index"
@@ -110,7 +114,25 @@ export default{
     .boxes{
       display: flex;
       flex-wrap: wrap;
+      padding-top: 50px;
     }
+    .container.text{ 
+      position: relative;
+      .current-series{
+        position: absolute;
+        top: -25px;
+        left: 0;
+        width: 200px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        font-weight: bolder;
+        background-color: $primary-color;
+      }
+    }
+    
   }
   
 </style>
