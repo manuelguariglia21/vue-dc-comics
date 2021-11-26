@@ -6,7 +6,7 @@
       </div>
       <nav>
         <ul>
-          <li v-for="(link, index) in links" :key="index" ><a href="#" ><span :class="{'active': link.current === true}">{{link.text}}</span></a></li>
+          <li v-for="(link, index) in menu" :key="index" ><a href="#" ><span :class="{'active': link.current === true}">{{link.text}}</span></a></li>
         </ul>
       </nav>
     </div>
@@ -16,60 +16,12 @@
 <script>
 export default {
   name: 'Header',
+  props:{
+    menu: Array
+  },
   data(){
     return{
-      links:[
-        {
-          url:'/characters',
-          text: 'CHARACTERS',
-          current: false
-        },
-        {
-          url:'/comics',
-          text: 'COMICS',
-          current: true
-        },
-        {
-          url:'/movies',
-          text: 'MOVIES',
-          current: false
-        },
-        {
-          url:'/tv',
-          text: 'TV',
-          current: false
-        },
-        {
-          url:'/games',
-          text: 'GAMES',
-          current: false
-        },
-        {
-          url:'/collectibles',
-          text: 'COLLECTIBLES',
-          current: false
-        },
-        {
-          url:'/videos',
-          text: 'VIDEOS',
-          current: false
-        },
-        {
-          url:'/fans',
-          text: 'FANS',
-          current: false
-        },
-        {
-          url:'/news',
-          text: 'NEWS',
-          current: false
-        },
-        {
-          url:'/shop',
-          text: 'SHOP',
-          current: false
-        },
-      ]
+      
     }
   }
 }
