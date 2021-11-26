@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div class="f-top">
-      <div class="container">
+      <div class="container flex-box">
         <div class="side-l">
           <div class="f-menu">
             <ul>
@@ -25,7 +25,7 @@
       </div>
     </div>
     <div class="f-bottom">
-      <div class="container">
+      <div class="container flex-box">
         <div class="fb-left">
           <div class="btn"><a href="#">Sign-Up Now!</a></div>
         </div>

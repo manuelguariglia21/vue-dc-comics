@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="container">
+    <div class="container flex-box">
       <div>
         <img src="../assets/img/dc-logo.png" alt="">
       </div>
