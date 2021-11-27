@@ -6,7 +6,7 @@
       </div>
       <nav>
         <ul>
-          <li @click="handleClick(link)" v-for="(link, index) in menu" :key="index" ><a href="#" ><span :class="{'active': link.current === true}">{{link.text}}</span></a></li>
+          <li @click="handleClick(menu, index)" v-for="(link, index) in menu" :key="index" ><a href="#" ><span :class="{'active': link.current === true}">{{link.text}}</span></a></li>
         </ul>
       </nav>
     </div>
@@ -16,12 +16,15 @@
 <script>
 export default {
   methods: {
-    handleClick: function(link) {
-      if(link.current === false){
-        link.current = true;
+    handleClick: function(linkedList, index) {
+      for(let i = 0; i < linkedList.length; i++){
+        linkedList[i].current = false;
       }
-      else if(link.current === true){
-        link.current = false;
+      if(linkedList[index].current === false){
+        linkedList[index].current = true;
+      }
+      else if(linkedList[index].current === true){
+        linkedList[index].current = false;
       }
     }
   },
