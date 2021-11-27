@@ -6,7 +6,7 @@
       </div>
       <nav>
         <ul>
-          <li v-for="(link, index) in menu" :key="index" ><a href="#" ><span :class="{'active': link.current === true}">{{link.text}}</span></a></li>
+          <li @click="handleClick(link)" v-for="(link, index) in menu" :key="index" ><a href="#" ><span :class="{'active': link.current === true}">{{link.text}}</span></a></li>
         </ul>
       </nav>
     </div>
@@ -15,16 +15,28 @@
 
 <script>
 export default {
+  methods: {
+    handleClick: function(link) {
+      if(link.current === false){
+        link.current = true;
+      }
+      else if(link.current === true){
+        link.current = false;
+      }
+    }
+  },
   name: 'Header',
   props:{
     menu: Array
   },
   data(){
     return{
-      
+      isActive: true,
     }
   }
+
 }
+  
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

@@ -26,8 +26,8 @@ export default {
 @import '../assets/style/mixins.scss';
 @import '../assets/style/vars.scss';
 .card{
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   margin: 5px;
   background-color: red;
   overflow: hidden;
@@ -36,7 +36,7 @@ export default {
   }
 }
 .desc{
-  width: 200px;
+  width: 150px;
   font-weight: bolder;
   text-transform: uppercase;
   margin-left: 5px;
