@@ -103,7 +103,7 @@ export default {
 
     .f-top{
       height: 300px;
-      width: 100vw;
+      width: 100%;
       background-image: url(../assets/img/footer-bg.jpg);
       background-size: cover;
       color: white;
@@ -142,7 +142,7 @@ export default {
 
     .f-bottom{
       height: 90px;
-      width: 100vw;
+      width: 100%;
       background-color: #303030;
       color: white;
       display: flex;

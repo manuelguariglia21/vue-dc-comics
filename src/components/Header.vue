@@ -33,7 +33,7 @@ export default {
 @import '../assets/style/mixins.scss';
 header{
   height: 90px;
-  width: 100vw;
+  width: 100%;
   background-color: white;
   color: black;
   font-size: 12px;

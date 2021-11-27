@@ -108,7 +108,7 @@ export default{
 @import '../assets/style/mixins.scss';
 @import '../assets/style/vars.scss';
   main{
-    width: 100vw;
+    width: 100%;
     background-color: black;
     color: white;
     .boxes{

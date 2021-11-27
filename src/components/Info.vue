@@ -2,7 +2,7 @@
   <section>
     <div>
       <ul>
-        <li v-for="image in images " :key="image">
+        <li v-for="(image, index) in images " :key="index">
           <a href="#">
             <img :src="image.image" alt="">
             <span>{{image.text}}</span>
@@ -50,7 +50,7 @@ export default {
 @import '../assets/style/mixins.scss';
   section{
     height: 90px;
-    width: 100vw;
+    width: 100%;
     background-color: #0086FF;
     color: white;
 
