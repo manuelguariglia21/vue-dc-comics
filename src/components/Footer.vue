@@ -63,7 +63,7 @@ export default {
       
       .f-menu{
         display: inline-block;
-        margin-right: 2vw;
+        margin-right: 15px;
         ul{
         list-style: none;
         color: white;
@@ -71,9 +71,9 @@ export default {
         flex-direction: column;
         align-items: flex-start;
         li{
-          font-size: .8vw;
+          font-size: 12px;
           &:first-of-type{
-            font-size: 1.2vw;
+            font-size: 16px;
             font-weight: bolder;
             text-transform: uppercase;
           }
@@ -116,7 +116,7 @@ export default {
           font-weight: bolder;
         }
         span, img{
-          padding-right: 1vw;
+          padding-right: 15px;
         }
         img:last-of-type{
           padding-right: 0;

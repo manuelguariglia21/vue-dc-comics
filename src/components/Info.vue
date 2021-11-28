@@ -72,11 +72,11 @@ export default {
         color: white;
         text-decoration: none;
         img{
-          height: 4vw;
+          height: 50px;
           padding-right: 5px;
         }
         span{
-          font-size: 1vw;
+          font-size: 12px;
         }
       }
       }
