@@ -4,7 +4,7 @@
     <Jumbotron />
     <Main />
     <Info />
-    <Footer />
+    <Footer :fmenu = "footerMenus"/>
   </div>
 </template>
 
@@ -77,7 +77,19 @@ export default {
           text: 'SHOP',
           current: false
         },
-      ]
+      ],
+
+    footerMenus: [
+
+      ['dc comics', 'characters', 'comics', 'movies', 'TV', 'games', 'videos', 'news'],
+
+      ['dc', 'terms of use', 'privacy policy (New)', 'ad choices', 'advertising', 'jobs', 'subscritions', 'talent workshops', 'CPSC Certificates', 'ratings', 'shop help', 'contact us'],
+
+      ['sites', 'DC', 'MAD Magazine', 'DC Kids', 'DC Universe', 'DC Power Visa'],
+
+      ['shop', 'shop DC', 'shop DC Collectibles'],
+
+],
     }
   }
 }

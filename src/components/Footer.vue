@@ -3,19 +3,9 @@
     <div class="f-top">
       <div class="container flex-box">
         <div class="side-l">
-          <div class="f-menu">
+          <div class="f-menu" v-for="(menu, index) in fmenu" :key="index">
             <ul>
-              <li v-for="(link, index) in menus.links" :key="index" ><a href="#" ><span :class="{'active': link.current === true}">{{link.text}}</span></a></li>
-            </ul>
-          </div>
-          <div class="f-menu">
-            <ul>
-              <li v-for="(link, index) in menus.links" :key="index" ><a href="#" ><span :class="{'active': link.current === true}">{{link.text}}</span></a></li>
-            </ul>
-          </div>
-          <div class="f-menu">
-            <ul>
-              <li v-for="(link, index) in menus.links" :key="index" ><a href="#" ><span :class="{'active': link.current === true}">{{link.text}}</span></a></li>
+              <li v-for="(menu, indice) in fmenu[index]" :key="indice"><a href="#"><span>{{menu}}</span></a></li>
             </ul>
           </div>
         </div>
@@ -45,52 +35,12 @@
 <script>
 export default {
   name: 'Footer',
+  props:{
+    fmenu: Array
+  },
   data(){
     return{
-      menus: {
-        links:[
-          {
-            url:'/dc comics',
-            text: 'Dc Comics',
-            current: false
-          },
-          {
-            url:'/characters',
-            text: 'Characters',
-            current: false
-          },
-          {
-            url:'/comics',
-            text: 'Comics',
-            current: true
-          },
-          {
-            url:'/movies',
-            text: 'Movies',
-            current: false
-          },
-          {
-            url:'/tv',
-            text: 'TV',
-            current: false
-          },
-          {
-            url:'/games',
-            text: 'Games',
-            current: false
-          },
-          {
-            url:'/videos',
-            text: 'Videos',
-            current: false
-          },
-          {
-            url:'/news',
-            text: 'News',
-            current: false
-          },
-        ]
-      }
+      
     }
   }
 }
@@ -113,14 +63,17 @@ export default {
       
       .f-menu{
         display: inline-block;
-        margin-right: 35px;
+        margin-right: 2vw;
         ul{
         list-style: none;
         color: white;
-        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         li{
+          font-size: .8vw;
           &:first-of-type{
-            font-size: 16px;
+            font-size: 1.2vw;
             font-weight: bolder;
             text-transform: uppercase;
           }
@@ -163,7 +116,7 @@ export default {
           font-weight: bolder;
         }
         span, img{
-          padding-right: 15px;
+          padding-right: 1vw;
         }
         img:last-of-type{
           padding-right: 0;
