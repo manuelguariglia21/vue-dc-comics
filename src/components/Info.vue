@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div>
+    <div class="info">
       <ul>
         <li v-for="(image, index) in images " :key="index">
           <a href="#">
@@ -49,33 +49,38 @@ export default {
 <style scoped lang="scss">
 @import '../assets/style/mixins.scss';
   section{
-    height: 90px;
+    height: 150px;
     width: 100%;
     background-color: #0086FF;
     color: white;
-
-    div{
-      width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    .info{
+      width: 65%;
       margin: 0 auto;
-      line-height: 90px;
       ul{
       @include list();
-      a{
+      li{
+        a{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
         text-transform: uppercase;
         color: white;
         text-decoration: none;
-        padding-right: 1rem;
         img{
-          height: 35px;
-          padding-right: 15px;
+          height: 4vw;
+          padding-right: 5px;
         }
         span{
-          font-size: 10px;
+          font-size: 1vw;
         }
       }
+      }
+      
       }
     }
 
